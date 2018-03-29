@@ -1,0 +1,25 @@
+.App {
+    margin: 20px;
+}
+
+.appTitle{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.todo{
+   border: 1px solid red;
+    flex: 2;
+    margin-right: 5px;
+}
+.done {
+    border: 1px solid blue;
+    flex: 2;
+    margin-left: 5px;
+}
