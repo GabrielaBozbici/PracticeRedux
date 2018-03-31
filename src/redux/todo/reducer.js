@@ -1,11 +1,16 @@
-export default function reducer (state = {}, action) {
+export default function reducer (state = {
+    list: []
+}, action) {
     switch(action.type) {
         case 'ADD_TODO': {
-            console.log('primeste', action )
+            // console.log('primeste', action.payload.text )
+            // console.log('state: ', state)
             return {
                 ...state,
-                text: action.payload
-
+                list: [
+                    ...state.list,
+                    action.payload
+                ]
             }
         }
 

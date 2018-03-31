@@ -1,5 +1,6 @@
 
 export const addTodo = (todo) => {
+    // console.log('item din actiune: ', todo)
     return {
         type: "ADD_TODO",
         payload: todo

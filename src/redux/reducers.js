@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import todo from './todo/reducer';
+import todos from './todo/reducer';
 
 export const appReducers = combineReducers({
-    todo
+    todos
 });
