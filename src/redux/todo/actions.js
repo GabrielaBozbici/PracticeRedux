@@ -15,6 +15,14 @@ export const editTodo = (text) => {
     }
 }
 
+export const editDone = (item) => {
+    console.log('Action creater: ', item)
+    return {
+        type: "EDIT_DONE",
+        payload: item
+    }
+}
+
 
 
 export const deleteTodo = (todoId) => {

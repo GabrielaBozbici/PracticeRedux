@@ -6,7 +6,7 @@ const store = createStore(appReducers);
 
 
 store.subscribe(() => {
-    console.log('State app: ', store.getState())
+    console.log('State-ul app-ului: ', store.getState())
 })
 
 export default store;

@@ -16,9 +16,9 @@ class App extends Component {
               <div className="todo">
                   <TodoList show="all"/>
               </div>
-              <div className="done">
-                  <TodoList show="done"/>
-              </div>
+              {/*<div className="done">*/}
+                  {/*<TodoList show="done"/>*/}
+              {/*</div>*/}
           </div>
 
 

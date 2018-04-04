@@ -26,7 +26,6 @@ class CreateTodo extends Component {
             inputValue: e.target.value
         })
     }
-
     handleSubmit = (e) => {
         e.preventDefault();
         let inputValue = this.state.inputValue
@@ -36,13 +35,14 @@ class CreateTodo extends Component {
         if (inputValue !== "") {
             this.props.addTodo({
                 text: inputValue,
-                category: 'undone',
-                date: new Date().getTime()
+                done: 'undone',
+                date: new Date().getTime(),
+                id: new Date().getTime()
             })
-
-            console.log("valoarea la submit: ", inputValue)
+            // console.log("valoarea la submit: ", inputValue)
         }
     }
+
 
     render() {
         const styles = {

@@ -10,11 +10,10 @@ class TodoList extends Component {
 
     render() {
         // let { allToDos } = this.props;
-        console.log(this.props)
         return (
             <div className="TodoList">
                 <ol>
-                  {this.props.allToDos.map((todo, index) => {return <TodoItem todo={todo} key={index}/>})}
+                  {this.props.allToDos.map((todo, id) => {return <TodoItem todo={todo} key={id}/>})}
                 </ol>
             </div>
         );

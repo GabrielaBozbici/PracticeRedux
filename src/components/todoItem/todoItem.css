@@ -1,10 +1,27 @@
 .TodoItem {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
 }
 
-.TodoItem > p {
-    border: 1px solid green;
+.TodoItem :first-child {
+    flex: 3;
+}
 
+.TodoItem :nth-child(2) {
+    flex: 1 1 0%;
+}
+
+.TodoItem :nth-child(3) {
+    flex: 1;
+}
+
+.TodoItem :nth-child(4) {
+    flex: 1;
+}
+
+.TodoItem .checked {
+    color: #00bdd4;
+    font-style: italic;
 }
