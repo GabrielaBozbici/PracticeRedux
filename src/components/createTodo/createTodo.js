@@ -9,6 +9,8 @@ import TextField from 'material-ui/TextField';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import {orange500} from 'material-ui/styles/colors';
 
+import {firebaseDb} from '../../index.js'
+
 
 class CreateTodo extends Component {
 
@@ -33,14 +35,21 @@ class CreateTodo extends Component {
             inputValue: ""
         })
         if (inputValue !== "") {
-            this.props.addTodo({
+            const todo = {
                 text: inputValue,
                 done: 'undone',
                 date: new Date().getTime(),
                 id: new Date().getTime()
-            })
-            // console.log("valoarea la submit: ", inputValue)
+            };
+            this.props.addTodo(todo);
+
+            let todoRef = firebaseDb.ref().child(`/todos/`).push();
+            let key = todoRef.getKey();
+            todo.id = key;
+            todoRef.set(todo)
         }
+            // console.log("valoarea la submit: ", inputValue)
+
     }
 
 

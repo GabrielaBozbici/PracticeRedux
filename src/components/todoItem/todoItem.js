@@ -67,11 +67,7 @@ class TodoItem extends Component {
             })
         }
       );
-
-
-
     }
-
 
 
     render() {
@@ -88,8 +84,9 @@ class TodoItem extends Component {
             <div>
                 <li>
                     <div className="TodoItem">
+                        <h1>{this.state.speed}</h1>
                         <div className={`${this.state.checked ? 'checked' : ''}`}>
-                            <p >{todo.text}</p>
+                            <p>{todo.text}</p>
                             {/*<p>{new Date(todo.date).toString()}</p>*/}
                         </div>
                         <Checkbox
