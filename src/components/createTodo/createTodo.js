@@ -37,11 +37,11 @@ class CreateTodo extends Component {
         if (inputValue !== "") {
             const todo = {
                 text: inputValue,
-                done: 'undone',
+                done: false,
                 date: new Date().getTime(),
                 id: new Date().getTime()
             };
-            this.props.addTodo(todo);
+            // this.props.addTodo(todo);
 
             let todoRef = firebaseDb.ref().child(`/todos/`).push();
             let key = todoRef.getKey();
@@ -51,8 +51,6 @@ class CreateTodo extends Component {
             // console.log("valoarea la submit: ", inputValue)
 
     }
-
-
     render() {
         const styles = {
             underlineStyle: {
@@ -75,7 +73,6 @@ class CreateTodo extends Component {
                             <ContentAdd />
                         </FloatingActionButton>
                     </form>
-
                 </div>
             </div>
         );
@@ -87,7 +84,7 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
     return {
-        addTodo: (todo) => dispatch(addTodo(todo))
+        // addTodo: (todo) => dispatch(addTodo(todo))
     }
 }
 

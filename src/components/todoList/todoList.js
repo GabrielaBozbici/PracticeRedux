@@ -6,8 +6,6 @@ import {connect} from "react-redux";
 
 
 class TodoList extends Component {
-
-
     render() {
         // let { allToDos } = this.props;
         return (
